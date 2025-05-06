@@ -8,8 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "predeploy": "npm run generate && touch dist/.nojekyll",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "rm -rf dist && npm run generate && touch dist/.nojekyll",
+    "deploy": "gh-pages -d dist --dotfiles --branch gh-pages"
   },
   "dependencies": {
     "nuxt": "^3.17.2",
